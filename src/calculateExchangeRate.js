@@ -1,4 +1,4 @@
 export function calculateExchangeRate(response, currencyCode, amount) {
   const conversionRate = response.conversion_rates[currencyCode];
-  return  amount * conversionRate;
+  return  (amount * conversionRate).toFixed(2);
 }
