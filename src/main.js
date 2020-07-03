@@ -20,12 +20,18 @@ $(document).ready(function() {
     event.preventDefault();
     let amount = $("input[name=amount]").val();
     let countryCode = $("select[name=country]").val();
-
-    (async () => {
-      let exchangeRate = new ExchangeRate();
-      const response = await exchangeRate.getExchangeRate();
-      let exchangedAmount = calculateExchangeRate(response, countryCode, amount);
+    let exchangedAmount;
+    if(!sessionStorage.getItem("exchangeResults")) {
+      (async () => {
+        let exchangeRate = new ExchangeRate();
+        const response = await exchangeRate.getExchangeRate();
+        sessionStorage.setItem("exchangeResults", JSON.stringify(response));
+        exchangedAmount = calculateExchangeRate(response, countryCode, amount);
+        outputExchangedCurrency(amount, countryCode, exchangedAmount);
+      })();
+    } else { 
+      exchangedAmount = calculateExchangeRate(JSON.parse(sessionStorage.getItem("exchangeResults")), countryCode, amount);
       outputExchangedCurrency(amount, countryCode, exchangedAmount);
-    })();
+    }
   });
 });
