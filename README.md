@@ -1,22 +1,28 @@
 # _Currency Exchanger_
 
-#### _JavaScript/jQuery Exercise for [Epicodus](https://www.epicodus.com/), 2020.07.02_
+#### _JavaScript/jQuery Project for [Epicodus](https://www.epicodus.com/), 2020.07.02_
 
 #### By **Sara Kane**
 
 ## Description
-This is a currency exchange application using the API from [ExchangeRate-API](https://www.exchangerate-api.com/). 
+This is a currency exchange application using the API from [ExchangeRate-API](https://www.exchangerate-api.com/). It allows a user to enter an amount in U.S. dollars and convert that amount into other currencies. 
 
 ## Specifications
 
-
+| Behavior                                                                                                                                                        |  Input | Output                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:------:|-------------------------------------|
+| User should be able to enter an amount in U.S dollars and convert that amount into Euros                                                                        | 10 USD | 8.88 EUR                            |
+| User should be able to enter an amount in U.S dollars and convert that amount into Canadian Dollars                                                             | 10 USD | 13.59 CAD                           |
+| User should be able to enter an amount in U.S dollars and convert that amount into Australian Dollars                                                           | 10 USD | 14.44 AUD                           |
+| User should be able to enter an amount in U.S dollars and convert that amount into Chinese Renminbi                                                             | 10 USD | 70.68 CNY                           |
+| User should be able to enter an amount in U.S dollars and convert that amount into Indian Rupees                                                                | 10 USD | 748.79 INR                          |
+| If the API call results in an error, the application should return a notification that states what the error is                                                 |        | Your request could not be completed |
+| If the query response doesn't include that particular currency, the application should return a notification that states the currency in question doesn't exist | AAA    | Currency not recognized             |
 
 ## Known Bugs
 * No known bugs.   
 
 ## Setup/Installation Requirements
-#### View Online
-Visit the GitHub Pages by clicking on the following link or by typing it in your web browser <url>
 
 #### View locally
 To clone this repository from your command line you will need [Git](https://git-scm.com/) installed. You will also need [Node.js and npm](https://nodejs.org/en/download/).
