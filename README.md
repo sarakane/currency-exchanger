@@ -1,6 +1,6 @@
 # _Currency Exchanger_
 
-#### _JavaScript/jQuery Project for [Epicodus](https://www.epicodus.com/), 2020.07.02_
+#### _JavaScript/jQuery Project for [Epicodus](https://www.epicodus.com/), 2020.07.03_
 
 #### By **Sara Kane**
 
@@ -39,9 +39,6 @@ To view locally or test this application, you will need an API key from [Exchang
 
 #### View locally
 * In the application directory run: `$ npm start`
-
-#### Test
-* In the application directory run: `$npm test`
 
 ### Edit
 * Open the application in your preferred code editor, such as Visual Studio Code.
