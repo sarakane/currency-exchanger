@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project Name</title>
+    <title>Currency Exchanger</title>
   </head>
   <body>
-
+    <div class="container">
+      <form id="currencyForm">
+        <div class="form-row">
+          <div class="col">
+            <input type="number" name="amount" class="form-control" placeholder="Currency Amount" min=0 step=0.1>
+          </div>
+          <div class="col">
+            <select name="country" class="form-control">
+              <option>AUD</option>
+              <option>CAD</option>
+              <option>CNY</option>
+              <option>EUR</option>
+              <option>INR</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </div>
+      </form>
+      <div id="output">
+        <p><span id="outputInitialValue"></span> United States Dollar equals <span id="outputConvertedAmount"></span> <span id="outputCountryConversion"></span></p>
+      </div>
+    </div>
   </body>
 </html>
