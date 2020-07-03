@@ -40,7 +40,7 @@ To view locally or test this application, you will need an API key from [Exchang
 #### View locally
 * In the application directory run: `$ npm start`
 
-### Edit
+#### Edit
 * Open the application in your preferred code editor, such as Visual Studio Code.
 
 ## Technologies Used
