@@ -9,14 +9,24 @@ function calculateExchangeRate(response, currencyCode, amount) {
   return  amount * conversionRate;
 }
 
-$(document).ready(function() {
+function outputExchangedCurrency (amount, currencyCode, exchangedAmount) {
+  $("#outputInitialValue").text(amount);
+  $("#outputConvertedAmount").text(exchangedAmount);
+  $("#outputCountryConversion").text(currencyCode);
+  $("#output").show();
+}
 
-  (async () => {
-    let amount = 10;
-    let currencyCode = "EUR";
-    let exchangeRate = new ExchangeRate();
-    const response = await exchangeRate.getExchangeRate();
-    let exchangedAmount = calculateExchangeRate(response, currencyCode, amount);
-    console.log(exchangedAmount);
-  })();
+$(document).ready(function() {
+  $("#currencyForm").submit(function(event) {
+    event.preventDefault();
+    let amount = $("input[name=amount]").val();
+    let currencyCode = $("select[name=country]").val();
+
+    (async () => {
+      let exchangeRate = new ExchangeRate();
+      const response = await exchangeRate.getExchangeRate();
+      let exchangedAmount = calculateExchangeRate(response, currencyCode, amount);
+      outputExchangedCurrency(amount, currencyCode, exchangedAmount);
+    })();
+  });
 });
