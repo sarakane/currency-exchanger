@@ -1,0 +1,9 @@
+#output {
+  display: none;
+  margin-top: 5px;
+}
+
+.jumbotron {
+  background-color: midnightblue;
+  color: deepskyblue;
+}
