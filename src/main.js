@@ -18,9 +18,10 @@ function outputExchangedCurrency (amount, countryCode, exchangedAmount) {
 $(document).ready(function() {
   $("#currencyForm").submit(function(event) {
     event.preventDefault();
-    let amount = $("input[name=amount]").val();
-    let countryCode = $("select[name=country]").val();
+    let amount = $("#amount").val();
+    let countryCode = $("#country").val();
     let exchangedAmount;
+    
     if(!sessionStorage.getItem("exchangeResults")) {
       (async () => {
         let exchangeRate = new ExchangeRate();
