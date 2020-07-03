@@ -3,11 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
 import { ExchangeRate } from './exchangeRate';
-
-function calculateExchangeRate(response, currencyCode, amount) {
-  const conversionRate = response.conversion_rates[currencyCode];
-  return  amount * conversionRate;
-}
+import { calculateExchangeRate } from './calculateExchangeRate.js';
 
 function outputExchangedCurrency (amount, currencyCode, exchangedAmount) {
   $("#outputInitialValue").text(amount);
