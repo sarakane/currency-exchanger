@@ -10,13 +10,14 @@
       </div>
     </div>
     <div class="container">
-      <form id="currencyForm">
-        <div class="form-row">
-          <div class="col">
-            <input type="number" name="amount" class="form-control" placeholder="United States Dollar Amount" min=0 step=0.1 required>
-          </div>
-          <div class="col">
-            <select name="country" class="form-control">
+      <form id="currencyForm" class="form-inline">
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount" class="form-control ml-1 mr-1" placeholder="United States Dollar Amount" min=0 step=0.1 required>
+        </div>
+        <div class="form-group">
+            <label for="country">Convert to </label>
+            <select name="country" id="country" class="form-control ml-1 mr-1">
               <option value="AED">United Arab Emirates Dirham</option>
               <option value="ARS">Argentine Peso</option>
               <option value="AUD">Australian Dollar</option>
@@ -70,14 +71,10 @@
               <option value="ZAR">South African Rand</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-outline-dark"><svg width="1em" height="1em" viewBox="0 5 12 12" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z"/>
-            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H4.5A.5.5 0 0 1 4 8z"/>
-          </svg></button>
-        </div>
+          <button type="submit" class="btn btn-outline-dark">Submit</button>
       </form>
       <div id="output">
-        
+
       </div>
     </div>
   </body>

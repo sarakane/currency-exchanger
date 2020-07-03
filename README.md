@@ -24,7 +24,6 @@ This is a currency exchange application using the API from [ExchangeRate-API](ht
 
 ## Setup/Installation Requirements
 
-#### View locally
 To clone this repository from your command line you will need [Git](https://git-scm.com/) installed. You will also need [Node.js and npm](https://nodejs.org/en/download/).
 
 First navigate in the command line to where you want to clone this repository. 
